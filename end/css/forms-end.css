@@ -1,0 +1,96 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(../img/galaxy.jpg); /*Step0.1:*/
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 80%;				/*Step0.0: Note1: .wrapper này có 2 phần section và aside*/
+	margin: 0 auto;			/*Note1: cho nó vô giữa*/
+	padding: 1em;
+	background-color: #EFB106;
+	display: flex;
+	flex-flow: row nowrap;
+}
+section {				/*Step0: Note2: <section> chiếm 57% của wrapper*/
+	flex-basis: 57%;
+	margin-right: 10%;
+}
+aside {
+	flex-basis: 33%; /*Note2: <section>, margin-right, <aside> + lại= 100% */
+}
+p, [for="abtype"] {				/*Step11 */
+	margin-bottom: 0;  /*Step1: margin*/
+	margin-top: 2rem;
+}
+fieldset, #abtype {
+	margin-bottom: 2rem;
+}
+fieldset {				/*Step2: */
+	border: 1px solid black;
+	border-radius: 10px;
+}
+legend {
+	font-weight: bold;		/*Step3: */
+	font-size: 1.3rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+	display: block;			/*Step3: Note1: legend is inline element (check =border...); chuyển nó thành block =>display: block*/
+}
+label {
+	display: block;  /*Step4: label là inline element => change it to block, cho nó xuống hàng*/
+	padding-bottom:0.3rem; /*Note: này từ từ định dạng sau đc*/  
+}
+input:not([type="radio"]):not([type="checkbox"]),  /*Step10: -below*/
+textarea {						/*Step9: -below*/
+	display: block;
+	margin-bottom: 2rem;
+	width: 20rem;			/*Step9:note1: -below*/
+	font-family: Arial, Helvetica sans-serif;  /*Step9:note2: -below */
+	font-size: 1em;
+	border-radius: 10px;
+	padding: 0 1rem;
+}
+textarea {					/*Step5:make it bigger*/
+	height: 10rem;
+	padding: 1rem;
+}
+select {					/*Step6: make size of words in list bigger */
+	font-size: 1rem;
+}
+button {					/*Step7*/
+	margin: 2rem 0;
+	background-color: #BB342F;
+	color: white;
+	border: none;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+}
+button:hover {					/*Step8*/
+	background-color: #9A2B27;
+	cursor: all-scroll;
+}
+/*Step9: chuyển <input> từ inline->block, để padding/margin works more correctly*/
+/*Step9:note1: width: tất cả các khung cùng width ->more nice*/
+/*Step9:note2: some of input fields had different fonts in it, so need this (font-family & font-size)*/
+
+/*Step10: style cho tất cả <input> trừ radio buttons & checkbox; và style cho textarea luôn*/
+/*Step11: add more space "what type of abduction...?" cho attribute for="abtype"*/
+
+
+
+
+
+
+
+
+
+
+
