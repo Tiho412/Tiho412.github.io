@@ -10,6 +10,9 @@ body {
 	margin: 0;
 	padding: 0;
 }
+h1{
+	font-family: 'Fredericka the Great', cursive;
+}
 .wrapper {
 	width: 80%;				/*Step0.0: Note1: .wrapper này có 2 phần section và aside*/
 	margin: 0 auto;			/*Note1: cho nó vô giữa*/
